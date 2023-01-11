@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import {Routes,Route} from "react-router-dom"
+import {useState,createContext} from "react"
+import ReactSwitch from 'react-switch';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+
+//import { AboutUs,  FindUs, Footer,  } from './components';
+import './App.css';
+import AboutUs from './components/AboutUs';
+import FindUs from './components/FindUs';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Services from './components/Services';
+import Header from './components/Header';
+
+
+export const ThemeContext = createContext(null);
+
+const App = ()=>{
+    const [theme,setTheme]= useState("light");
+
+     const toggleTheme =()=>{
+    setTheme((curr)=>(curr === "light" ? "dark"  :"light"))
+  };
+  
+  return(
+   <ThemeContext.Provider value={{theme,toggleTheme}}>
+      <div className="app" id={theme} > 
+      {/* <Login/>  */}
+      <Navbar />
+      <Header/>
+      <AboutUs />
+      <Services/>
+      <FindUs />
+      
+        {/* <Routes>
+      
+          <Route path="/" element={<Header/>}/>
+          <Route path="/about" element={<AboutUs />}/>
+          <Route path="/services" element={ <Services/>}/>
+          <Route path="/findus" element={ <FindUs />}/>       
+        </Routes> */}
+        <Footer />
+        </div>
+        <div>
+        <label>{theme==="light" ? "Light Mode" : "Dark Mode"}</label>
+      <ReactSwitch onChange={toggleTheme} checked={theme==="dark"}/>
+      </div>
+        </ThemeContext.Provider>
+)};
+
 
 export default App;
