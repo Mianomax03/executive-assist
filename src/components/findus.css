@@ -1,0 +1,88 @@
+.app__parent{
+    
+    background: url(https://media.istockphoto.com/id/171288829/photo/businesswoman.jpg?s=612x612&w=0&k=20&c=qm4Mo9bOkn_32fUAthLXZLKv4wTn89b1Qg7iysZLRok=),rgba(190, 233, 235,.1);
+    background-color:rgba(190, 233, 235,.1); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    z-index:-1;
+    
+}
+#dark .app__parent {
+    background-color:var(--color-black)
+}
+
+#dark .app__parent p {
+    color:var(--color-white)
+}
+
+#dark .icon{
+    color:var(--color-white)
+}
+
+.app__findus{
+ display:flex;
+ flex-direction: column;
+ height:100vh;
+ font-family: var(--font-main);
+
+}
+.app__feedback{
+ color:var(--color-black);
+ height:50vh;
+ text-align: center;
+ font-size:48px;
+}
+
+.app__info_container{
+ display:flex;
+ justify-content: space-evenly;
+ align-items:center;
+ color:var(--color-black);
+ z-index: 1
+
+}
+
+.app_email,.app__phone {
+ text-align: center;
+ height:40vh;
+ width:40%;
+ border:1px solid var(--color-golden);
+ font-size:24px;
+
+}
+
+@media screen and (max-width:1150px){
+    .app__info_container{
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        margin-bottom:2em;
+      
+    }
+
+    .app_email{
+        width:90%;
+        margin-bottom:2em;
+
+    }
+
+    .app__phone {
+        width:90%;
+        margin-bottom:2em;
+    }
+
+
+}
+
+@media screen and (max-width:650px){
+    .app__feedback{
+       font-size:30px;
+    }
+    .app_email,.app__phone {
+        text-overflow:wrap;
+        font-size: 20px;
+    }
+}
+
+
