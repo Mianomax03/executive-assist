@@ -35,6 +35,11 @@
 
 }
 
+.app__switch{
+  margin-left:3em;
+  color:var(--color-black)
+}
+
 .app__navbar-links{
     flex:1;
     display:flex;

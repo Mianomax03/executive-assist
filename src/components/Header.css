@@ -1,7 +1,6 @@
 .app__header{
     
     background-color:rgba(190, 233, 235,.1);
-    z-index:-15;
     
    
 }
@@ -17,8 +16,9 @@
 
 .app__wrapper_info{
   background-color:var(--color-white);
-  z-index:15;
   transition:1s ease-in-out;
+  padding:20px;
+
 }
 
 .app__wrapper_info:hover{

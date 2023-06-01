@@ -12,7 +12,7 @@ import {FaPennyArcade } from "react-icons/fa";
 
 const services = () => {
   return (
-  <>
+  
   
  
     <div className="app__services" id="services">
@@ -89,7 +89,7 @@ const services = () => {
        
        
         </div>
-    </div ></>
+    </div >
   )
 }
 

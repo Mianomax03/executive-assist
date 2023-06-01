@@ -1,7 +1,6 @@
 import React from 'react';
 // import {Routes,Route} from "react-router-dom"
 import {useState,createContext} from "react"
-import ReactSwitch from 'react-switch';
 
 
 
@@ -27,8 +26,8 @@ const App = ()=>{
   return(
    <ThemeContext.Provider value={{theme,toggleTheme}}>
       <div className="app" id={theme} > 
-      {/* <Login/>  */}
-      <Navbar />
+    
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Header/>
       <AboutUs />
       <Services/>
@@ -43,10 +42,7 @@ const App = ()=>{
         </Routes> */}
         <Footer />
         </div>
-        <div>
-        <label>{theme==="light" ? "Light Mode" : "Dark Mode"}</label>
-      <ReactSwitch onChange={toggleTheme} checked={theme==="dark"}/>
-      </div>
+       
         </ThemeContext.Provider>
 )};
 

@@ -2,8 +2,12 @@
     display:flex;
     flex-direction: column;
     background-color:rgba(190, 233, 235,.1);
+ 
 
 }
+.app__aboutus-content p {
+
+color:var(--color-blue);}
 
 #dark .app__aboutus-content{
     background:var(--color-black) ;
@@ -18,6 +22,9 @@
 
 .app__aboutus h2{
     margin-top:2em;
+    padding-left:6em;
+    padding-right:6em;
+    padding-bottom: 3em;
 }
 
 #light .app__aboutus p{
