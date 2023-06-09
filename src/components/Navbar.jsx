@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import images from '../constants/images.js'
-import Login from './Login';
+// import Login from './Login';
 import {FaHome} from "react-icons/fa"
 import {FcAbout,FcServices} from "react-icons/fc"
  import {HiLocationMarker} from "react-icons/hi"
@@ -34,7 +34,7 @@ const Navbar = ({theme,toggleTheme}) => {
   </ul>
   <div className="app__navbar-login">
   {/* <Switch/>  */}
-    <Login/>    
+    {/* <Login/>     */}
   </div>
   <div className="app__navbar-smallscreen">
     <GiHamburgerMenu className="icon"  fontSize={27} onClick={()=> setToggleMenu(true)}/>
